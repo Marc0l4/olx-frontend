@@ -3,20 +3,17 @@
 import { createContext, ReactNode, useState } from "react";
 
 type ContextType = {
-    token: boolean;
-    userToken: string;
-    setUserToken: (newUserToken: string) => void;
-    setToken: (newToken: boolean) => void
+    token: string;
+    setToken: (newToken: string) => void
 }
 
 export const UserContext = createContext<ContextType | null>(null);
 
 export const UserContextProvider = ({ children }: { children: ReactNode }) => {
-    const [token, setToken] = useState<boolean>(false);
-    const [userToken, setUserToken] = useState<string>('');
+    const [token, setToken] = useState<string>('');
 
     return (
-        <UserContext.Provider value={{ token, setToken, userToken, setUserToken }}>
+        <UserContext.Provider value={{ token, setToken }}>
             {children}
         </UserContext.Provider>
     );

@@ -1,5 +1,5 @@
 export type CatType = {
-    _id: string;
+    id: string;
     name: string;
     slug: string;
     img: string;

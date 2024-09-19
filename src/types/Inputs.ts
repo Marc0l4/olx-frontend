@@ -18,3 +18,9 @@ export type AddAdInput = {
     priceNegotiable: boolean;
     desc: string;
 }
+
+export type SearchAdsInput = {
+    q: string;
+    state: string;
+    cat: string;
+}

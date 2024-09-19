@@ -1,11 +1,11 @@
 import { AdsType } from "./AdType"
 
 export type OneAdType = {
+    id: string;
     category: { _id: string, name: string, slug: string };
     dateCreated: string;
     description: string;
-    id: string;
-    images: string[];
+    images: [string];
     others: [AdsType];
     price: number;
     priceNegotiable: boolean;
